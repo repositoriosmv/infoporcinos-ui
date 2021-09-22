@@ -1,0 +1,49 @@
+{
+  "name": "@infoporcinos/core",
+  "version": "0.0.14",
+  "private": false,
+  "description": "Main InfoPorcinos components library",
+  "keywords": [
+    "react",
+    "components",
+    "ui"
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "rd /s /q dist && tsc && SET NODE_ENV=production babel src/lib/esm --out-dir dist --copy-files",
+    "build:esm": "tsc",
+    "build:cjs": "tsc --module commonjs --outDir lib/cjs"
+  },
+  "author": "InfoPorcinos Team",
+  "license": "ISC",
+  "peerDependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.14.8",
+    "@babel/core": "^7.14.8",
+    "@babel/preset-env": "^7.14.8",
+    "@types/react": "^17.0.15",
+    "@types/react-chartjs-2": "^2.5.7",
+    "@types/react-dom": "^17.0.9",
+    "@types/react-router-dom": "^5.1.8",
+    "babel-loader": "^8.2.2",
+    "babel-preset-es2015": "^6.24.1",
+    "typescript": "^4.3.5"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.12.1",
+    "@material-ui/core": "^4.12.2",
+    "clsx": "^1.1.1",
+    "react-router-dom": "^5.2.0"
+  },
+  "directories": {
+    "dist": "dist"
+  },
+  "files": [
+    "/dist"
+  ]
+}
